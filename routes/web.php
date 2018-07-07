@@ -15,4 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/demo', 'DemoController@index');
+
+Route::get('demo', 'DemoController@index');
+Route::get('de', function () {
+    return 'test';
+});
+
+Route::resource('admin/users', 'Admin\UsersController');

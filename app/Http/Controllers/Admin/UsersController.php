@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\User as UserMod;
 
-class PhotoController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,12 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        //
+        // return 'Admin Controller';
+	$mods = UserMod::all();
+	$mods = UserMod::where('active', 1)->where('city', 'nakornpathom')->get();
+	foreach ($mods as $item) {
+		echo $item->name." ".$item->email;
+	}
     }
 
     /**
