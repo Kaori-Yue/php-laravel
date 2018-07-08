@@ -12,7 +12,7 @@
 
 
 <!-- #################### Flash Message Start #################### -->
-<!-- Waiting for flash message -->
+@include('admin.layouts.partials.flash-message')
 <!-- #################### Flash Message Start #################### -->
 
 

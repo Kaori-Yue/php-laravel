@@ -94,7 +94,7 @@ class UsersController extends Controller
 		$mod->city = $request->city;
 		
 		$mod->save();
-		return "success";
+		return redirect('admin/users')->with('success', 'User ['.$request->name.'] created successfully.');
     }
 
     /**
