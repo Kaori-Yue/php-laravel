@@ -17,7 +17,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('sample');
+        return view('admin.layouts.template');
         // return 'Admin Controller';
 	/*
 	$mods = UserMod::all();
