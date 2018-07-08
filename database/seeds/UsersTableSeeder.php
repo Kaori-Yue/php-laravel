@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
     {
           $cities = array("bangkok", "nakornpathom");
 
-          for($i=1; $i<=10; $i++) {
+          for($i=1; $i<=100; $i++) {
               $key   = array_rand($cities);
               $city = $cities[$key];
 
