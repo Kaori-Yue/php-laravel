@@ -16,11 +16,20 @@ class UsersController extends Controller
     public function index()
     {
         // return 'Admin Controller';
+	/*
 	$mods = UserMod::all();
 	$mods = UserMod::where('active', 1)->where('city', 'nakornpathom')->get();
 	foreach ($mods as $item) {
 		echo $item->name." ".$item->email;
 	}
+	*/
+	$shop = UserMod::find(1)->shop;
+	echo $shop->name;
+
+
+	$user = UserMod::find(1);
+	echo $user->shop->name;
+
     }
 
     /**
