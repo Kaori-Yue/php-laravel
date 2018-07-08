@@ -17,7 +17,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('test');
+        return view('sample');
         // return 'Admin Controller';
 	/*
 	$mods = UserMod::all();
