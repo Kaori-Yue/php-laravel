@@ -1,3 +1,6 @@
+@extends('admin.layouts.template')
+@section('content')
+
 <!-- breadcrumb Start -->
 <ol class="breadcrumb">
  <li class="breadcrumb-item">
@@ -50,14 +53,19 @@
        </tfoot>
 
        <tbody>
+		@if($mods)
+		@foreach($mods as $item)
              <tr>
-               <td>User1</td>
-               <td>Mobile</td>
-               <td>user1@gmail.com</td>
-               <td>Bangkok</td>
+               <td>{{ $item->name }}</td>
+               <td>{{ $item->mobile }}</td>
+               <td>{{ $item->email }}</td>
+               <td>{{ $item->city }}</td>
                <td>
+			@if($item->active == 1)
                    <span class="badge badge-success">Active</span>
+			@else
                    <span class="badge badge-danger">Inactive</span>
+			@endif
                </td>
                <td>
                    <a href="#">
@@ -76,9 +84,18 @@
 
                </td>
              </tr>
+		@endforeach
+		@endif
        </tbody>
+	<tfoot align="right">
+		<tr>
+			<th colspan="6" style="justify-content: right;">{{ $mods->links('vendor.pagination.bootstrap-4') }}</th>
+		</tr>
+	</tfoot>
      </table>
    </div>
  </div>
  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 </div>
+
+@stop

@@ -17,7 +17,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('admin.layouts.template');
+	$mods = UserMod::paginate(10);
+        return view('admin.user.lists', compact('mods'));
         // return 'Admin Controller';
 	/*
 	$mods = UserMod::all();
