@@ -46,11 +46,11 @@
              <th>Action</th>
          </tr>
      </tfoot>-->
-       <tfoot align="right">
+       <!--<tfoot align="right">
        <tr>
            <th colspan="6" style="justify-content: right;">Pagination Link</th>
        </tr>
-       </tfoot>
+       </tfoot>-->
 
        <tbody>
 		@if($mods)
