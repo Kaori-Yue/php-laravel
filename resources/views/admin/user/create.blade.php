@@ -9,12 +9,12 @@
  <li class="breadcrumb-item active">Create</li>
 </ol>
 <!-- breadcrumb End -->
-<!--@include('admin.layouts.partials.flash-message')-->
+@include('admin.layouts.partials.flash-message')
 
 <div class="card mb-3">
   <div class="card-header">Create User</div>
   <div class="card-body">
-    <form method="POST" action="#">
+    <form method="POST" action="{{ URL::to('admin/users') }}">
 
     <div class="card border-dark">
           <div class="card-header">
@@ -23,7 +23,7 @@
           <div class="card-body text-dark">
               <div class="form-group">
                 <label for="email">Email address</label>
-                <input class="form-control" id="email" name="email" type="email" value="" aria-describedby="emailHelp" placeholder="Enter email">
+                <input class="form-control" id="email" name="email" type="email" value="{{ old('email') }}" aria-describedby="emailHelp" placeholder="Enter email">
                 <!--@if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                 @endif-->
@@ -54,13 +54,13 @@
         <div class="form-row">
           <div class="col-md-6">
             <label for="name">First name</label>
-            <input class="form-control" id="name" name="name" value="" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
+            <input class="form-control" id="name" name="name" value="{{ old('name') }}" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
 
 
           </div>
           <div class="col-md-6">
             <label for="surname">Last name</label>
-            <input class="form-control" id="surname" name="surname" value="" type="text" aria-describedby="nameHelp" placeholder="Enter last name">
+            <input class="form-control" id="surname" name="surname" value="{{ old('surname') }}" type="text" aria-describedby="nameHelp" placeholder="Enter last name">
 
 
           </div>
@@ -71,13 +71,13 @@
         <div class="form-row">
           <div class="col-md-6">
             <label for="mobile">Mobile</label>
-            <input class="form-control" id="mobile" name="mobile" value="" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
+            <input class="form-control" id="mobile" name="mobile" value="{{ old('mobile') }}" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
 
 
           </div>
           <div class="col-md-6">
             <label for="age">Age</label>
-            <input class="form-control" id="age" name="age" value="" type="text" aria-describedby="nameHelp" placeholder="Enter last name">
+            <input class="form-control" id="age" name="age" value="{{ old('age') }}" type="text" aria-describedby="nameHelp" placeholder="Enter last name">
 
 
           </div>
@@ -88,7 +88,7 @@
         <div class="form-row">
           <div class="col-md-6">
             <label for="address">Address</label>
-            <input class="form-control" id="address" name="address" value="" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
+            <input class="form-control" id="address" name="address" value="{{ old('address') }}" type="text" aria-describedby="nameHelp" placeholder="Enter first name">
 
 
           </div>
@@ -96,10 +96,10 @@
             <label for="city">City</label>
             <select class="form-control" id="city" name="city">
                 <option value="">---- Select ----</option>
-                <option value="bangkok">bangkok</option>
-                <option value="nakornpathom">nakornpathom</option>
-                <!--<option value="bangkok" {{ (old("city") == "bangkok" ? "selected":"") }} >bangkok</option>
-                <option value="nakornpathom"  {{ (old("city") == "nakornpathom" ? "selected":"") }} >nakornpathom</option>-->
+                <!--<option value="bangkok">bangkok</option>
+                <option value="nakornpathom">nakornpathom</option>-->
+                <option value="bangkok" {{ (old("city") == "bangkok" ? "selected":"") }} >bangkok</option>
+                <option value="nakornpathom"  {{ (old("city") == "nakornpathom" ? "selected":"") }} >nakornpathom</option>
             </select>
 
 

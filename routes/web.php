@@ -21,4 +21,4 @@ Route::get('de', function () {
     return 'test';
 });
 
-Route::resource('admin/user', 'Admin\UsersController');
+Route::resource('admin/users', 'Admin\UsersController');
