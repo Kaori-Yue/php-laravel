@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User as UserMod;
-
+use App\Model\Shop as ShopMod;
 class UsersController extends Controller
 {
     /**
@@ -23,12 +23,22 @@ class UsersController extends Controller
 		echo $item->name." ".$item->email;
 	}
 	*/
-	$shop = UserMod::find(1)->shop;
+	/*
+	$shop = ShopMod::find(1);
 	echo $shop->name;
-
+	echo "<br/>";
+	echo $shop->user->name;
+	echo "<br/>";
 
 	$user = UserMod::find(1);
 	echo $user->shop->name;
+	*/
+
+	$products = ShopMod::find(1)->products;
+	foreach ($products as $product) {
+		echo "Product: " . $product->name . "<br/>";
+	}
+
 
     }
 
