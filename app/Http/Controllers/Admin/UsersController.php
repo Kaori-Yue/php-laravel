@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User as UserMod;
 use App\Model\Shop as ShopMod;
+use App\Model\Product as ProductMod;
+
 class UsersController extends Controller
 {
     /**
@@ -34,11 +36,15 @@ class UsersController extends Controller
 	echo $user->shop->name;
 	*/
 
+	/*
 	$products = ShopMod::find(1)->products;
 	foreach ($products as $product) {
 		echo "Product: " . $product->name . "<br/>";
 	}
+	*/
 
+	$shop = ProductMod::find(1)->shop;
+	echo "Product is belongs to Shop :" . $shop->user;
 
     }
 
