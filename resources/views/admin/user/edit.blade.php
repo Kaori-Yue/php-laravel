@@ -9,13 +9,13 @@
  <li class="breadcrumb-item active">Create</li>
 </ol>
 <!-- breadcrumb End -->
-<!--@include('admin.layouts.partials.flash-message')-->
+@include('admin.layouts.partials.flash-message')-->
 
 <div class="card mb-3">
   <div class="card-header">Create User</div>
   <div class="card-body">
-    <!--<form method="POST" action="{{ URL::to('admin/user/'.$item->id) }}">-->
-    <form method="POST" action="#">
+    <form method="POST" action="{{ URL::to('admin/user/'.$item->id) }}">
+    
 
     <div class="card border-dark">
           <div class="card-header">

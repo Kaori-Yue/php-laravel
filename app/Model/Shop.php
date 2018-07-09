@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Shop extends Model
 {
     //
-	public function user()
+       public function user()
     {
         return $this->belongsTo('App\User');
-    }
 
-	public function products()
+    }
+     public function products()
     {
         return $this->hasMany('App\Model\Product');
     }

@@ -13,7 +13,7 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        //
+        return 'Index';
     }
 
     /**
@@ -23,7 +23,7 @@ class PhotoController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -34,7 +34,8 @@ class PhotoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        echo 'store';
+        //dd($request);
     }
 
     /**
@@ -56,7 +57,7 @@ class PhotoController extends Controller
      */
     public function edit($id)
     {
-        //
+        return 'edit : ' .$id;
     }
 
     /**
@@ -68,7 +69,7 @@ class PhotoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        echo 'update :'.$id;
     }
 
     /**
@@ -79,6 +80,6 @@ class PhotoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        echo 'destroy :' .$id;
     }
 }
