@@ -18,3 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::post('login', 'Api\LoginController@authenticate');
 Route::resource('products', 'Api\ProductController');
+
+Route::middleware('auth:api')->group(function () {
+     Route::resource('shop', 'Api\ShopController');
+});
+
